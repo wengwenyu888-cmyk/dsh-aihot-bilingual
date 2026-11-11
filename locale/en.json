@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "AIHOT bilingual reader",
+    "description": "Reads AIHOT news with large English text and small Chinese reference; click any word for its meaning in context."
+  }
+}
