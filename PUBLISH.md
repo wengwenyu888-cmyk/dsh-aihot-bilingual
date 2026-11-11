@@ -18,6 +18,9 @@ npm login          :: 浏览器登录你的 npm 账号（没有就先去 npmjs.c
 npm publish        :: 包名 dsh-aihot-bilingual；若重名，改用 @你的用户名/dsh-aihot-bilingual（package.json 的 name 加前缀即可）
 ```
 
+> 若改用 scoped 包名（`@wengwenyu888-cmyk/dsh-aihot-bilingual`），首次发布要加 `--access public`：
+> `npm publish --access public`。发布后核对：https://www.npmjs.com/package/<包名>
+
 发布后核对：https://www.npmjs.com/package/dsh-aihot-bilingual
 
 以后更新：改代码 → 把 `version` 加一（如 1.0.0 → 1.0.1）→ 再 `npm publish`。
