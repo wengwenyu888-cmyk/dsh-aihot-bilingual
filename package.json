@@ -1,0 +1,47 @@
+{
+  "name": "dsh-aihot-bilingual",
+  "version": "1.0.0",
+  "description": "AIHOT bilingual reader panel for DeepSeek Harness: large English text, small Chinese reference, click any word for its in-context meaning. 用 AIHOT（aihot.news）资讯学英语的双语阅读面板。",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "aihot",
+    "english-learning",
+    "bilingual",
+    "translation",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wengwenyu888-cmyk/dsh-aihot-bilingual.git"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0",
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-sidebar"]
+    }
+  }
+}
